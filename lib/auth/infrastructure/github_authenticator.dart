@@ -44,9 +44,9 @@ class GithubAuthenticator {
   Future<Credentials?> getSignedInCredentials() async {
     try {
       final storedCredentials = await _credentialsStorage.read();
-      if (storedCredentials!.isExpired && storedCredentials.canRefresh) {
-        //TODO : refresh
-      }
+      // if (storedCredentials!.isExpired && storedCredentials.canRefresh) {
+      //   //TODO : refresh
+      // }
       return storedCredentials;
     } on PlatformException {
       return null;
